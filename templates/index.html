@@ -12,15 +12,12 @@
   <title>Chess</title>
 </head>
 <body>
-  {% for piece in pieces %}
-  <span class="piece"> {{piece}} </span>
-  {% endfor %}
-  <table>
-    {% for row in rows %}
-    <tr id={{row}}>
-      {% for col in cols%}
-      <td id={{col}}>
-        {{row}} {{col}}
+  <table class="text-center">
+    {% for row in data %}
+    <tr>
+      {% for col in row%}
+      <td>
+        <span class="piece"> {{col}}</span>
       </td>
       {% endfor %}  
     </tr>
